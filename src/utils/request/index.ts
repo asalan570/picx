@@ -1,7 +1,14 @@
 import axios from './axios'
+import axiosGithub from './axiosGithub'
 import { CustomAxiosRequestConfig } from '@/common/model'
 
-export default function request(config: CustomAxiosRequestConfig): Promise<any> {
+/**
+ *
+ * @param config 配置参数
+ * @param github 是否请求github
+ * @returns
+ */
+export default function request(config: CustomAxiosRequestConfig,github:boolean): Promise<any> {
   const requestConfig: CustomAxiosRequestConfig = {}
 
   // @ts-ignore
@@ -20,32 +27,63 @@ export default function request(config: CustomAxiosRequestConfig): Promise<any> 
       requestConfig[configKey] = config[configKey]
     }
   }
-
-  return new Promise((resolve) => {
-    axios
-      .request(requestConfig)
-      .then((res) => {
-        const { status, data } = res
-        if (res && (status === 200 || status === 201 || status === 204)) {
-          resolve(data || 'SUCCESS')
-        } else {
-          resolve(null)
-        }
-      })
-      .catch((err) => {
-        if (requestConfig?.success422 && err?.status === 422) {
-          resolve(err?.data || 'SUCCESS')
-        } else {
-          const code = err?.status
-          const msg = err?.data?.message
-          if (!requestConfig?.noShowErrorMsg) {
-            console.error('PicX Error // ', err)
-            if (code !== undefined && msg !== undefined) {
-              ElMessage.error({ duration: 6000, message: `Code: ${code}, Message: ${msg}` })
-            }
+  if(github==null || github){
+    return new Promise((resolve) => {
+      axiosGithub
+        .request(requestConfig)
+        .then((res) => {
+          const { status, data } = res
+          if (res && (status === 200 || status === 201 || status === 204)) {
+            resolve(data || 'SUCCESS')
+          } else {
+            resolve(null)
           }
-          resolve(null)
-        }
-      })
-  })
+        })
+        .catch((err) => {
+          if (requestConfig?.success422 && err?.status === 422) {
+            resolve(err?.data || 'SUCCESS')
+          } else {
+            const code = err?.status
+            const msg = err?.data?.message
+            if (!requestConfig?.noShowErrorMsg) {
+              console.error('PicX Error // ', err)
+              if (code !== undefined && msg !== undefined) {
+                ElMessage.error({ duration: 6000, message: `Code: ${code}, Message: ${msg}` })
+              }
+            }
+            resolve(null)
+          }
+        })
+    })
+  }else{
+    return new Promise((resolve) => {
+      axios
+        .request(requestConfig)
+        .then((res) => {
+          const { status, data } = res
+          if (res && (status === 200 || status === 201 || status === 204)) {
+            resolve(data || 'SUCCESS')
+          } else {
+            resolve(null)
+          }
+        })
+        .catch((err) => {
+          if (requestConfig?.success422 && err?.status === 422) {
+            resolve(err?.data || 'SUCCESS')
+          } else {
+            const code = err?.status
+            const msg = err?.data?.message
+            if (!requestConfig?.noShowErrorMsg) {
+              console.error('PicX Error // ', err)
+              if (code !== undefined && msg !== undefined) {
+                ElMessage.error({ duration: 6000, message: `Code: ${code}, Message: ${msg}` })
+              }
+            }
+            resolve(null)
+          }
+        })
+    })
+  }
+
+
 }

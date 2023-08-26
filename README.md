@@ -1,7 +1,7 @@
 <a href="https://picx.xpoet.cn" >
 <img width="100" align="right" alt="PicX" src="https://cdn.staticaly.com/gh/XPoet/image-hosting@master/PicX/picx-logo.png">
 </a>
-
+git commit --no-verify -m "提交时的注释"
 # PicX
 
 [![Author](https://img.shields.io/badge/author-XPoet-violet.svg)](https://github.com/XPoet)

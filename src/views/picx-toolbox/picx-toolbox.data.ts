@@ -22,6 +22,13 @@ export const toolboxList = shallowRef<ToolItemModel[]>([
     desc: 'toolbox.tool_3_desc',
     icon: IEpPostcard,
     uuid: getUuid(),
+    path: '/watermarkImage'
+  },
+  {
+    name: 'toolbox.tool_4',
+    desc: 'toolbox.tool_4_desc',
+    icon: IEpPostcard,
+    uuid: getUuid(),
     path: '/watermark'
   }
 ])

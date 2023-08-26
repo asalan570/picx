@@ -60,6 +60,10 @@
       "position_2": "左下角",
       "position_3": "右上角",
       "position_4": "右下角"
+      ,"position_white_margin":"白色边框"
+      ,"position_equivalent_focal_length":"等效焦距"
+      ,"position_shadow":"阴影效果"
+      ,"text_layout":"选择布局"
     },
     "img_compress": {
       "title": "图片压缩设置",
@@ -211,6 +215,8 @@
     "tool_2_desc": "不限制图片大小和数量，在线转换成 Base64 编码",
     "tool_3": "图片水印 ",
     "tool_3_desc": "自定义水印文字、字体大小、位置、颜色和透明度",
+    "tool_4": "相机水印 ",
+    "tool_4_desc": "自定义照片相机水印布局样式、显示参数、背景虚化等功能",
     "copy_base64": "点击复制 Base64 编码",
     "copy_base64_success": "Base64 编码复制成功",
     "click_download": "点击下载",
@@ -219,10 +225,14 @@
     "add_watermark": "添加水印"
   },
   "feedback": {
-    "text_1": "PicX 是一款基于 GitHub API 开发的图床工具，提供图片上传托管、生成图片链接和常用图片工具箱服务。",
+    "text_1": "本站 是一款基于 GitHub API 开发的图床工具，提供图片上传托管、生成图片链接和常用图片工具箱服务。",
     "text_2": "建议将本站添加到浏览器收藏夹，方便下次使用。",
-    "text_3": "如果 PicX 对你有帮助，欢迎赞赏作者，支持开源。",
-    "text_4": "郑重声明：请勿使用 PicX 上传违反你当地法律的图片，所造成的一切后果与作者无关。"
+    "text_3": "如果 本站 对你有帮助，欢迎赞赏。",
+    "text_4": "郑重声明：请勿使用 本站 上传违反你当地法律的图片，所造成的一切后果与作者无关。",
+    "text_5": "本站基于 开源项目Picx开发,github地址：https://github.com/XPoet/picx，根据开源协议AGPL-3.0，开放源代码，地址：https://github.com/asalan570/picx"
+    ,"text_6":"图床使用指南"
+    ,"text_7":"布局示例图片"
+    ,"text_8":"图片水印不完整的情况：意味着图片可能没有包含完整的元信息(Metadata)。如果你是使用PS进行导出图片的操作，可以选择文件-导出-存储为Web所用格式（旧版），采用默认设置，并选择“元数据-全部”。微信直接发送图片也会导致元信息丢失，可以使用文件形式发送，谢谢。"
   },
   "region": {
     "CN": "中国大陆",

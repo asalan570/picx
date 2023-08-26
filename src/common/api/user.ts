@@ -10,7 +10,7 @@ export const getGitHubUserInfo = (token: string) => {
     url: '/user',
     method: 'GET',
     headers: { Authorization: `token ${token}` }
-  })
+  },true)
 }
 
 export const starredRepo = (repo: string = PICX_REPO_NAME) => {
@@ -19,5 +19,5 @@ export const starredRepo = (repo: string = PICX_REPO_NAME) => {
     method: 'PUT',
     data: {},
     noShowErrorMsg: true
-  })
+  },true)
 }

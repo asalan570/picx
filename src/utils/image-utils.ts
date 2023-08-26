@@ -257,6 +257,17 @@ export function imgFileToBase64(file: File): Promise<string | null> {
     reader.onerror = () => resolve(null)
   })
 }
+export const base64ToFile = (base64Str:string, fileName:string) => {
+  let arr = base64Str.split(',');
+  let mime = arr[0].match(/:(.*?);/)[1];
+  let bytes = atob(arr[1]); // 解码base64
+  let n = bytes.length
+  let ia = new Uint8Array(n);
+  while (n--) {
+      ia[n] = bytes.charCodeAt(n);
+  }
+  return new File([ia], fileName, { type: mime });
+}
 
 /**
  * 下载 File 格式的图片

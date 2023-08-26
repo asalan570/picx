@@ -20,7 +20,7 @@ export const getRepoList = (owner: string, page = 1) => {
         per_page: 100,
         page
       }
-    })
+    },true)
 
     if (tmpList && tmpList.length) {
       resolve(
@@ -94,7 +94,7 @@ If you like it, please give it a star on [GitHub](https://github.com/XPoet/picx)
       content: window.btoa(README)
     },
     noShowErrorMsg: true
-  })
+  },true)
 
   if (res) {
     initRepoLoading?.close()
@@ -118,5 +118,5 @@ export const createRepo = (token: string) => {
     },
     headers: { Authorization: `token ${token}` },
     success422: true
-  })
+  },true)
 }

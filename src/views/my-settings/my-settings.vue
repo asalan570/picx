@@ -41,7 +41,7 @@
       </el-collapse-item>
 
       <!-- 图片水印设置 -->
-      <el-collapse-item :title="$t('settings.img_watermark.title')" name="2">
+      <!-- <el-collapse-item :title="$t('settings.img_watermark.title')" name="2">
         <ul class="setting-list">
           <li class="setting-item has-desc">
             <el-switch
@@ -60,7 +60,7 @@
             </el-card>
           </li>
         </ul>
-      </el-collapse-item>
+      </el-collapse-item> -->
 
       <!-- 图片压缩设置 -->
       <el-collapse-item :title="$t('settings.img_compress.title')" name="3">

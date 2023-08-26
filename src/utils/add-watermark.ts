@@ -81,3 +81,6 @@ export async function addWatermarkToImage(
     }, imageFile.type)
   })
 }
+export async function addWatermark(){
+
+}

@@ -60,6 +60,10 @@
       "position_2": "左下角",
       "position_3": "右上角",
       "position_4": "右下角"
+      ,"position_white_margin":"白色邊框"
+      ,"position_equivalent_focal_length":"等效焦距"
+      ,"position_shadow":"陰影效果"
+      ,"text_layout":"選擇佈局"
     },
     "img_compress": {
       "title": "圖片壓縮設置",
@@ -211,6 +215,8 @@
     "tool_2_desc": "不限製圖片大小和數量，在線轉換成 Base64 編碼",
     "tool_3": "圖片水印 ",
     "tool_3_desc": "自定義水印文字、字體大小、位置、顏色和透明度",
+    "tool_4": "相機浮水印",
+    "tool_4_desc": "自定義照片相機浮水印佈局樣式、顯示參數、背景虛化等功能",
     "copy_base64": "點擊復製 Base64 編碼",
     "copy_base64_success": "Base64 編碼復製成功",
     "click_download": "點擊下載",
@@ -221,8 +227,12 @@
   "feedback": {
     "text_1": "PicX 是一款基於 GitHub API 開發的圖床工具，提供圖片上傳托管、生成圖片鏈接和常用圖片工具箱服務。",
     "text_2": "建議將本站添加到瀏覽器收藏夾，方便下次使用。",
-    "text_3": "如果 PicX 對你有幫助，歡迎贊賞作者，支持開源。",
-    "text_4": "鄭重聲明：請勿使用 PicX 上傳違反你當地法律的圖片，所造成的一切後果與作者無關。"
+    "text_3": "如果 PicX 對你有幫助，歡迎贊賞。",
+    "text_4": "鄭重聲明：請勿使用 PicX 上傳違反你當地法律的圖片，所造成的一切後果與作者無關。",
+    "text_5": "本站基於開源項目Picx開發，github地址： https://github.com/XPoet/picx ，根據開源協定AGPL-3.0，開放原始程式碼，地址： https://github.com/asalan570/picx"
+    ,"text_6":"圖床使用指南"
+    ,"text_7":"佈局示例圖片"
+    ,"text_8":"圖片浮水印不完整的情况：意味著圖片可能沒有包含完整的元資訊（Metadata）。 如果你是使用PS進行匯出圖片的操作，可以選擇檔案-匯出-存儲為Web所用格式（舊版），採用默認設置，並選擇“中繼資料-全部”。 微信直接發送圖片也會導致元資訊遺失，可以使用檔案形式發送，謝謝。"
   },
   "region": {
     "CN": "中國大陸",

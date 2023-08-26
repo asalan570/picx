@@ -11,7 +11,7 @@ export const uploadSingleImage = (url: string, data: any) => {
     url,
     method: 'PUT',
     data
-  })
+  },true)
 }
 
 /**
@@ -34,5 +34,5 @@ export const uploadImageBlob = (img: UploadImageModel, owner: string, repo: stri
       ).split(',')[1],
       encoding: 'base64'
     }
-  })
+  },true)
 }

@@ -22,6 +22,7 @@
     "*.{vue,js,ts}": "eslint --fix"
   },
   "dependencies": {
+    "@fingerprintjs/fingerprintjs": "^4.0.1",
     "@yireen/squoosh-browser": "^1.0.7",
     "axios": "^1.3.5",
     "element-plus": "2.3.7",

@@ -58,6 +58,7 @@ declare module '@vue/runtime-core' {
     UploadArea: typeof import('./src/components/upload-area/upload-area.vue')['default']
     WatermarkConfigBox: typeof import('./src/components/watermark-config-box/watermark-config-box.vue')['default']
     WatermarkTool: typeof import('./src/components/tools/watermark-tool/watermark-tool.vue')['default']
+    WatermarkToolImage: typeof import('./src/components/tools/watermark-tool-image/watermark-tool-image.vue')['default']
   }
   export interface ComponentCustomProperties {
     vLoading: typeof import('element-plus/es')['ElLoadingDirective']

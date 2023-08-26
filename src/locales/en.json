@@ -60,6 +60,10 @@
       "position_2": "Bottom Left",
       "position_3": "Top Right",
       "position_4": "Bottom Right"
+      ,"position_white_margin":"White border"
+      ,"position_equivalent_focal_length":"equivalent focal length"
+      ,"position_shadow":"SHADOW"
+      ,"text_layout":"Select Layout"
     },
     "img_compress": {
       "title": "Image Compression Settings",
@@ -209,6 +213,8 @@
     "tool_2_desc": "Online conversion of images to Base64 encoding without size or quantity limit",
     "tool_3": "Image Watermark",
     "tool_3_desc": "Customize watermark text, font size, position, color and opacity",
+    "tool_4": "Camera Watermark",
+    "tool_4_desc": "Customize photo camera watermark layout style, display parameters, background blur, and other functions",
     "copy_base64": "Click to copy Base64 encoding",
     "copy_base64_success": "Base64 encoding copied successfully",
     "click_download": "Click to download",
@@ -217,10 +223,14 @@
     "add_watermark": "Add Watermark"
   },
   "feedback": {
-    "text_1": "PicX is a GitHub API based image hosting tool, providing image upload and hosting, generating image links, and a set of commonly used image tools.",
+    "text_1": "This website is a GitHub API based image hosting tool, providing image upload and hosting, generating image links, and a set of commonly used image tools.",
     "text_2": "We suggest adding our website to your browser bookmarks for easy future access.",
-    "text_3": "If PicX is helpful to you, please consider donating to the author to support open source development.",
-    "text_4": "Disclaimer: Do not upload images that violate the laws in your local jurisdiction. The author is not responsible for any consequences arising from such actions."
+    "text_3": "If This website is helpful to you, please consider donating to the author to support open source development.",
+    "text_4": "Disclaimer: Do not upload images that violate the laws in your local jurisdiction. The author is not responsible for any consequences arising from such actions.",
+    "text_5": "This website is developed based on the open source project Picx, and the github address is: https://github.com/XPoet/picx According to the open source protocol AGPL-3.0, open source, address: https://github.com/asalan570/picx"
+    ,"text_6":"Guidelines for Using the Drawing Bed"
+    ,"text_7":"Layout example image"
+    ,"text_8":"Incomplete image watermark: This means that the image may not contain complete metadata. If you are using PS to export images, you can choose File Export Store as Web format (old version), use default settings, and select 'Meta Data All'. Sending images directly on WeChat can also cause loss of meta information. You can send them in the form of a file. Thank you."
   },
   "region": {
     "CN": "Mainland China",

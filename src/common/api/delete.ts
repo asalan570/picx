@@ -19,5 +19,5 @@ export const deleteSingleImage = (owner: string, repo: string, path: string, sha
       message: PICX_DEL_IMG_DESC,
       sha
     }
-  })
+  },true)
 }

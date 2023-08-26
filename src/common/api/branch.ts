@@ -11,7 +11,7 @@ export const getBranchInfo = (owner: string, repo: string, branch: string) => {
   return request({
     url: `/repos/${owner}/${repo}/branches/${branch}`,
     method: 'GET'
-  })
+  },true)
 }
 
 /**
@@ -25,7 +25,7 @@ export const getBranchInfoList = (owner: string, repo: string): Promise<any> => 
     const tmpList: any[] = await request({
       url: `/repos/${owner}/${repo}/branches`,
       method: 'GET'
-    })
+    },true)
 
     if (tmpList && tmpList.length) {
       resolve(
@@ -67,7 +67,7 @@ export const createNewBranch = async (
     const res1 = await request({
       url: `/repos/${owner}/${repo}/git/refs/heads/${branchList[0].value}`,
       method: 'GET'
-    })
+    },true)
 
     if (res1) {
       sha = res1.object.sha
@@ -88,7 +88,7 @@ export const createNewBranch = async (
         ref: `refs/heads/${branch}`, // 新分支的名称
         sha
       }
-    })
+    },true)
 
     if (res2) {
       newBranchSha = res2.object.sha
@@ -108,7 +108,7 @@ export const createNewBranch = async (
         force: true,
         sha: newBranchSha
       }
-    })
+    },true)
 
     if (res3) {
       callback()

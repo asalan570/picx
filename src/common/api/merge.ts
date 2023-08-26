@@ -21,7 +21,7 @@ export const createTree = (owner: string, repo: string, blobs: any[], head: any)
       })),
       base_tree: head?.commit?.commit?.tree?.sha || null
     }
-  })
+  },true)
 }
 
 /**
@@ -40,7 +40,7 @@ export const createCommit = (owner: string, repo: string, tree: any, head: any) 
       parents: [head.commit.sha],
       message: PICX_UPLOAD_IMGS_DESC
     }
-  })
+  },true)
 }
 
 /**
@@ -57,5 +57,5 @@ export const createRef = (owner: string, repo: string, branch: string, sha: stri
     params: {
       sha
     }
-  })
+  },true)
 }

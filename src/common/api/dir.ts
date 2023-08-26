@@ -18,7 +18,7 @@ export const getDirInfoList = (userConfigInfo: UserConfigInfoModel, path: string
       params: {
         ref
       }
-    })
+    },true)
 
     if (tmpList && tmpList.length) {
       resolve(
@@ -53,7 +53,7 @@ export const getRepoPathContent = (userConfigInfo: UserConfigInfoModel, path: st
         'no-cache': getUuid(),
         ref
       }
-    })
+    },true)
 
     if (res && res.length) {
       res

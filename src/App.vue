@@ -16,6 +16,9 @@ import { getLanguageByRegion, getRegionByIP, setWindowTitle, throttle } from '@/
 import { ElementPlusSizeEnum, LanguageEnum } from '@/common/model'
 import MainContainer from '@/views/main-container/main-container.vue'
 import router from '@/router'
+import {
+  getDictData
+} from '@/common/api'
 
 const instance = getCurrentInstance()
 const store = useStore()
@@ -40,6 +43,19 @@ const elementPlusSizeHandle = (width: number) => {
     })
     elementPlusSize.value = ElementPlusSizeEnum.large
   }
+}
+/**
+ * layout布局图片预加载
+ */
+const loadLayoutIMage = async ()=>{
+  const type = 'layout';
+  const res = await getDictData(type);
+  for(let i = 0;i < res.data.length;i++){
+    let image = new Image()
+    image.src = res.data[i].remark
+  }
+  let image = new Image()
+  image.src = 'https://cdn.staticaly.com/gh/asalan570/picx-images-hosting@master/20230825/布局-不启用白色边框.4m7kq5rihfs0.webp'
 }
 
 const setLanguage = (language: LanguageEnum) => {
@@ -130,6 +146,7 @@ watch(
 
 onMounted(() => {
   init()
+  loadLayoutIMage()
 })
 </script>
 

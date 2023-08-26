@@ -3,11 +3,11 @@ import { LS_PICX_CONFIG, AXIOS_BASE_URL, AXIOS_TIMEOUT } from '@/common/constant
 import { getLocal } from '@/utils/storage'
 
 const baseURL = AXIOS_BASE_URL
-
 const axios = Axios.create({
   baseURL,
   timeout: AXIOS_TIMEOUT
 })
+
 
 axios.defaults.headers['Content-Type'] = 'application/json'
 
@@ -40,5 +40,4 @@ axios.interceptors.response.use(
     return Promise.reject(error.response)
   }
 )
-
 export default axios

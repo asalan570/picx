@@ -8,6 +8,7 @@ import feedback from '@/views/feedback-info/feedback-info.vue'
 import compressTool from '@/components/tools/compress-tool/compress-tool.vue'
 import base64Tool from '@/components/tools/base64-tool/base64-tool.vue'
 import watermarkTool from '@/components/tools/watermark-tool/watermark-tool.vue'
+import watermarkToolImage from '@/components/tools/watermark-tool-image/watermark-tool-image.vue'
 import { setWindowTitle } from '@/utils'
 
 const routes: Array<RouteRecordRaw> = [
@@ -72,6 +73,11 @@ const routes: Array<RouteRecordRaw> = [
         path: '/toolbox/watermark',
         name: 'Watermark',
         component: watermarkTool
+      },
+      {
+        path: '/toolbox/watermarkImage',
+        name: 'WatermarkImage',
+        component: watermarkToolImage
       }
     ]
   },

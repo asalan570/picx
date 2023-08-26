@@ -48,6 +48,7 @@ declare module '@vue/runtime-core' {
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     FolderCard: typeof import('./components/folder-card/folder-card.vue')['default']
     GettingImages: typeof import('./components/getting-images/getting-images.vue')['default']
+    GettingWatermark: typeof import('./components/getting-watermark/getting-watermark.vue')['default']
     HeaderContent: typeof import('./components/header-content/header-content.vue')['default']
     IEpCaretBottom: typeof import('~icons/ep/caret-bottom')['default']
     IEpCaretLeft: typeof import('~icons/ep/caret-left')['default']
@@ -75,7 +76,10 @@ declare module '@vue/runtime-core' {
     SelectedInfoBar: typeof import('./components/selected-info-bar/selected-info-bar.vue')['default']
     SiteCount: typeof import('./components/site-count/site-count.vue')['default']
     WatermarkConfigBox: typeof import('./components/watermark-config-box/watermark-config-box.vue')['default']
+    WatermarkConfigBoxBack: typeof import('./components/watermark-config-box/watermark-config-box-back.vue')['default']
+    WatermarkConfigBoxImage: typeof import('./components/watermark-config-box-image/watermark-config-box-image.vue')['default']
     WatermarkTool: typeof import('./components/tools/watermark-tool/watermark-tool.vue')['default']
+    WatermarkToolImage: typeof import('./components/tools/watermark-tool-image/watermark-tool-image.vue')['default']
   }
   export interface ComponentCustomProperties {
     vLoading: typeof import('element-plus/es')['ElLoadingDirective']
